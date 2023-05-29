@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 320px;
+  margin: 0 2rem;
+}
+
+.title {
+  text-align: center;
+}
+.title--imp-1 {
+  font-size: 1.75rem;
+}
+.title--imp-2 {
+  font-size: 1.25rem;
+}
+
+.text {
+  color: black;
+  text-align: center;
+}
+.text--type-bold {
+  font-weight: bold;
+}
+.text--type-light {
+  color: grey;
+}
+
+.button {
+  height: 2rem;
+  border-radius: 1rem;
+  margin: auto;
+  border: none;
+}
+.button--width-full {
+  width: 100%;
+}
+.button--color-blue {
+  background-color: rgb(84, 95, 255);
+  color: white;
+}
+
+/*# sourceMappingURL=styles.css.map */

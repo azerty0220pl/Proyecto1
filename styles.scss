@@ -1,0 +1,52 @@
+$--color-blue: rgb(84, 95, 255);
+
+* {
+    box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   min-width: 320px;
+   margin: 0 2rem;
+}
+
+.title {
+    text-align: center;
+    &--imp-1 {
+        font-size: 1.75rem;
+    }
+
+    &--imp-2 {
+        font-size: 1.25rem;
+    }
+}
+
+.text {
+    color: black;
+    text-align: center;
+
+    &--type-bold {
+        font-weight: bold;
+    }
+
+    &--type-light {
+        color: grey;
+    }
+}
+
+.button {
+    height: 2rem;
+    border-radius: 1rem;
+    margin: auto;
+    border: none;
+
+    &--width-full {
+        width: 100%;
+    }
+
+    &--color-blue {
+        background-color: $--color-blue;
+        color: white;
+    }
+}

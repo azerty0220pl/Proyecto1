@@ -1,6 +1,7 @@
 $--color-blue: #08A6E4;
 $--color-pink: #FB3B64;
 $--color-green: #55DFB4;
+$--background-grey: #F7F7F7;
 
 * {
     box-sizing: border-box;
@@ -29,6 +30,13 @@ body {
     padding: 0 2rem;
     padding-top: 8rem;
     overflow: hidden;
+
+    .img {
+        display: block;
+        margin: auto;
+        width: 35%;
+        margin-bottom: 2rem;
+    }
 }
 
 .background {
@@ -52,7 +60,7 @@ body {
         color: grey;
     }
 
-    &--type-spaced{
+    &--type-spaced {
         letter-spacing: 6px;
     }
 
@@ -65,7 +73,7 @@ body {
         font-size: 1.75rem;
     }
 
-    &--logo{
+    &--logo {
         color: $--color-blue;
         text-align: start;
         font-size: 2rem;
@@ -73,8 +81,12 @@ body {
         font-weight: 300;
     }
 
-    &--color-blue{
+    &--color-blue {
         color: $--color-blue;
+    }
+
+    &--align-start{
+        text-align: start;
     }
 }
 
@@ -96,9 +108,35 @@ body {
     }
 }
 
-.img {
-    display: block;
-    margin: auto;
-    width: 35%;
-    margin-bottom: 2rem;
+.benefits {
+    background-color: $--background-grey;
+    padding: 2rem;
+
+    .card {
+        background-color: white;
+        border-radius: 5px;
+        border: 1px solid lightgrey;
+        margin-bottom: 2rem;
+        padding: 1rem;
+    }
+
+    .card:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .img {
+        display: block;
+        margin: 1rem auto;
+        width: 75%;
+        margin-bottom: 2rem;
+        border-radius: 5px;
+    }
+
+    .wrapper {
+        background-color: $--color-green;
+        border-radius: 5px;
+        padding: 2rem;
+        margin: -1rem;
+        margin-top: 1rem;
+    }
 }

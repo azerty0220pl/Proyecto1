@@ -365,6 +365,9 @@ body {
   .pricing .button--color-blue {
     margin-top: 5rem;
   }
+  .footer {
+    padding: 0.5rem 8rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

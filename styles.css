@@ -45,13 +45,16 @@ body {
   margin-left: auto;
 }
 .text--size-small {
-  font-size: 0.5rem;
+  font-size: 0.75rem;
   margin: 0;
 }
 .text--type-bold {
   font-weight: 800;
 }
-.text--type-spaced {
+.text--spaced-1 {
+  letter-spacing: 3px;
+}
+.text--spaced-2 {
   letter-spacing: 6px;
 }
 .text--title-1 {
@@ -97,6 +100,7 @@ body {
 }
 .text--price {
   font-size: 2.5rem;
+  margin: 0;
 }
 .text--margin-small {
   margin-bottom: 0.3rem;
@@ -113,6 +117,7 @@ body {
 }
 .button--width-full {
   width: 100%;
+  margin-top: 2rem;
 }
 .button--color-blue {
   background-color: #08A6E4;
@@ -157,13 +162,13 @@ body {
   border: 1px solid lightgrey;
 }
 
-.pricing {
+.pricing .card-holder {
   padding: 2rem;
 }
 .pricing .card {
   border: 1px solid black;
   border-radius: 20px;
-  padding: 2rem 0 3rem 0;
+  padding-top: 2rem;
   width: 100%;
 }
 .pricing .card div {
@@ -176,7 +181,8 @@ body {
 .pricing .card--color-blue {
   border-color: #08A6E4;
   box-shadow: 0.1rem 0.1rem 0.5rem #08A6E4;
-  margin: 0 -1rem;
+  margin: 3rem -4%;
+  width: 108%;
 }
 .pricing .card--color-pink {
   border-color: #FB3B64;
@@ -185,8 +191,8 @@ body {
   border-color: #55DFB4;
 }
 .pricing .button {
-  margin-top: -2rem;
-  margin-bottom: 2rem;
+  margin-top: 3rem;
+  margin-bottom: -1.5rem;
 }
 
 .contact {
@@ -239,6 +245,126 @@ body {
 .footer i {
   vertical-align: middle;
   margin: 0 0.25rem !important;
+}
+
+@media only screen and (min-width: 600px) {
+  .background {
+    left: 0;
+    margin-left: -2rem;
+    width: 100vw;
+  }
+  .button--width-full {
+    width: auto;
+    padding: 0 10rem;
+  }
+  .card-holder {
+    display: flex;
+    justify-content: space-around;
+    margin: 6rem 0;
+  }
+  .benefits .card {
+    width: 75%;
+    margin: 4rem auto;
+    height: 25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .benefits .card div {
+    width: 40rem;
+  }
+  .benefits .card--direction-reverse {
+    flex-direction: row-reverse;
+  }
+  .benefits .card--direction-none {
+    display: block;
+  }
+  .benefits .card .img {
+    width: 30%;
+    margin: 2rem 0;
+  }
+  .last-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+    width: 75%;
+    height: 25rem;
+    margin: 4rem auto;
+    align-items: center;
+  }
+  .last-card .card {
+    width: 60%;
+  }
+  .last-card .wrapper {
+    width: calc(40% - 4rem);
+  }
+  .last-card .card, .last-card .wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    justify-content: center;
+    align-items: start;
+  }
+  .last-card .card p {
+    width: 40rem;
+    margin-left: 0;
+  }
+  .line {
+    display: block;
+    border: 1px solid black;
+    width: 30rem;
+    height: 2px;
+    margin-top: 3rem;
+  }
+  .line--color-pink {
+    border-color: #FB3B64;
+  }
+  .line--color-blue {
+    border-color: #08A6E4;
+  }
+  .line--color-green {
+    border-color: #55DFB4;
+  }
+  .pricing .card-holder {
+    width: 75%;
+    margin: 4rem auto;
+  }
+  .pricing .text--title-1 {
+    margin-top: 4rem;
+  }
+  .pricing .text {
+    text-align: center;
+  }
+  .pricing .text--margin-small {
+    margin-bottom: 1rem;
+  }
+  .pricing .card {
+    width: 30%;
+  }
+  .pricing .card div {
+    display: block;
+    margin: 2rem auto;
+    height: auto;
+    width: 45%;
+  }
+  .pricing .card--color-blue {
+    margin: -2rem 0;
+  }
+  .pricing .card--color-blue div:last-of-type {
+    padding-top: 2rem;
+  }
+  .pricing .button {
+    width: 40%;
+  }
+  .pricing .button--color-pink {
+    margin-top: 3.75rem;
+    margin-bottom: -2.25rem;
+  }
+  .pricing .button--color-blue {
+    margin-top: 5rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

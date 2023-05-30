@@ -52,7 +52,7 @@ body {
     margin-left: auto;
 
     &--size-small {
-        font-size: 0.5rem;
+        font-size: 0.75rem;
         margin: 0;
     }
 
@@ -60,7 +60,11 @@ body {
         font-weight: 800;
     }
 
-    &--type-spaced {
+    &--spaced-1 {
+        letter-spacing: 3px;
+    }
+
+    &--spaced-2 {
         letter-spacing: 6px;
     }
 
@@ -118,6 +122,7 @@ body {
 
     &--price {
         font-size: 2.5rem;
+        margin: 0;
     }
 
     &--margin-small {
@@ -136,6 +141,7 @@ body {
 
     &--width-full {
         width: 100%;
+        margin-top: 2rem;
     }
 
     &--color-blue {
@@ -189,11 +195,14 @@ body {
 }
 
 .pricing {
-    padding: 2rem;
+    .card-holder{
+        padding: 2rem;
+    }
+
     .card{
         border: 1px solid black;
         border-radius: 20px;
-        padding: 2rem 0 3rem 0;
+        padding-top: 2rem;
         width: 100%;
 
         div {
@@ -209,7 +218,8 @@ body {
         &--color-blue {
             border-color: $--color-blue;
             box-shadow: 0.1rem 0.1rem 0.5rem $--color-blue;
-            margin: 0 -1rem;
+            margin: 3rem -4%;
+            width: 108%;
         }
 
         &--color-pink {
@@ -222,8 +232,8 @@ body {
     }
 
     .button {
-        margin-top: -2rem;
-        margin-bottom: 2rem;
+        margin-top: 3rem;
+        margin-bottom: -1.5rem;
     }
 }
 
@@ -284,5 +294,157 @@ body {
     i {
         vertical-align: middle;
         margin: 0 0.25rem !important;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .background {
+        left: 0;
+        margin-left: -2rem;
+        width: 100vw;
+    }
+
+    .button--width-full {
+        width: auto;
+        padding: 0 10rem;
+    }
+
+    .card-holder {
+        display: flex;
+        justify-content: space-around;
+        margin: 6rem 0;
+    }
+
+    .benefits {
+
+        .card {
+            width: 75%;
+            margin: 4rem auto;
+            height: 25rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            div {
+                width: 40rem;
+            }
+
+            &--direction-reverse {
+                flex-direction: row-reverse;
+            }
+
+            &--direction-none {
+                display: block;
+            }
+
+            .img {
+                width: 30%;
+                margin: 2rem 0;
+            }
+        }
+    }
+
+    .last-card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 4rem;
+        width: 75%;
+        height: 25rem;
+        margin: 4rem auto;
+        align-items: center;
+
+        .card {
+            width: 60%;
+        }
+
+        .wrapper {
+            width: calc(40% - 4rem);
+        }
+
+        .card, .wrapper {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            margin: 0;
+            justify-content: center;
+            align-items: start;
+        }
+
+        .card p {
+            width: 40rem;
+            margin-left: 0;
+        }
+    }
+
+    .line {
+        display: block;
+        border: 1px solid black;
+        width: 30rem;
+        height: 2px;
+        margin-top: 3rem;
+
+        &--color-pink {
+            border-color: $--color-pink;
+        }
+
+        &--color-blue {
+            border-color: $--color-blue;
+        }
+
+        &--color-green {
+            border-color: $--color-green;
+        }
+    }
+
+    .pricing {
+        .card-holder {
+            width: 75%;
+            margin: 4rem auto;
+        }
+
+        .text--title-1 {
+            margin-top: 4rem;
+        }
+
+        .text {
+            text-align: center;
+
+            &--margin-small {
+                margin-bottom: 1rem;
+            }
+        }
+
+        .card {
+            width: 30%;
+
+            div {
+                display: block;
+                margin: 2rem auto;
+                height: auto;
+                width: 45%;
+            }
+
+            &--color-blue{
+                margin: -2rem 0;
+
+                div:last-of-type {
+                    padding-top: 2rem;
+                }
+            }
+        }
+
+        .button {
+            width: 40%;
+
+            &--color-pink {
+                margin-top: 3.75rem;
+                margin-bottom: -2.25rem;
+            }
+
+            &--color-blue {
+                margin-top: 5rem;
+            }
+        }
     }
 }

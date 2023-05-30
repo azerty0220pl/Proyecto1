@@ -1,45 +1,89 @@
-$--color-blue: rgb(84, 95, 255);
+$--color-blue: #08A6E4;
+$--color-pink: #FB3B64;
+$--color-green: #55DFB4;
 
 * {
     box-sizing: border-box;
-   margin: 0;
-   padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-   min-width: 320px;
-   margin: 0 2rem;
+    min-width: 320px;
+    max-width: 100%;
 }
 
-.title {
-    text-align: center;
-    &--imp-1 {
-        font-size: 1.75rem;
-    }
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+    box-shadow: 0 0 1rem black;
 
-    &--imp-2 {
-        font-size: 1.25rem;
+    * {
+        margin: 0 !important;
     }
+}
+
+.home {
+    padding: 0 2rem;
+    padding-top: 8rem;
+    overflow: hidden;
+}
+
+.background {
+    position: relative;
+    width: 250%;
+    left: -75%;
+    margin: 2rem 0;
 }
 
 .text {
+    font-family: Raleway;
     color: black;
     text-align: center;
+    margin-bottom: 1rem;
 
     &--type-bold {
-        font-weight: bold;
+        font-weight: 800;
     }
 
     &--type-light {
         color: grey;
     }
+
+    &--type-spaced{
+        letter-spacing: 6px;
+    }
+
+    &--title-1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    &--title-2 {
+        font-size: 1.75rem;
+    }
+
+    &--logo{
+        color: $--color-blue;
+        text-align: start;
+        font-size: 2rem;
+        display: inline-block;
+        font-weight: 300;
+    }
+
+    &--color-blue{
+        color: $--color-blue;
+    }
 }
 
 .button {
-    height: 2rem;
-    border-radius: 1rem;
+    height: 4rem;
+    border-radius: 2rem;
     margin: auto;
     border: none;
+    font-weight: 700;
 
     &--width-full {
         width: 100%;
@@ -48,5 +92,13 @@ body {
     &--color-blue {
         background-color: $--color-blue;
         color: white;
+        box-shadow: 0.1rem 0.1rem 0.5rem $--color-blue;
     }
+}
+
+.img {
+    display: block;
+    margin: auto;
+    width: 35%;
+    margin-bottom: 2rem;
 }

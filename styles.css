@@ -6,17 +6,15 @@
 
 body {
   min-width: 320px;
-  max-width: 100%;
 }
 
 .navBar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 0.5rem 0.75rem;
   box-shadow: 0 0 1rem black;
+  width: 100%;
 }
 .navBar * {
+  width: calc(50% - 2px);
   margin: 0 !important;
 }
 
@@ -44,6 +42,7 @@ body {
   color: black;
   text-align: center;
   margin-bottom: 1rem;
+  margin-left: auto;
 }
 .text--size-small {
   font-size: 0.5rem;
@@ -51,9 +50,6 @@ body {
 }
 .text--type-bold {
   font-weight: 800;
-}
-.text--type-light {
-  color: grey;
 }
 .text--type-spaced {
   letter-spacing: 6px;
@@ -71,6 +67,7 @@ body {
   font-size: 2rem;
   display: inline-block;
   font-weight: 300;
+  margin: 0;
 }
 .text--color-blue {
   color: #08A6E4;
@@ -89,15 +86,24 @@ body {
   color: #ff0000;
   margin: 0;
 }
+.text--color-grey {
+  color: grey;
+}
 .text--align-start {
   text-align: start;
+}
+.text--align-end {
+  text-align: end;
 }
 .text--price {
   font-size: 2.5rem;
 }
+.text--margin-small {
+  margin-bottom: 0.3rem;
+}
 
 .button {
-  height: 4rem;
+  height: 3rem;
   border-radius: 2rem;
   margin: auto;
   display: block;
@@ -157,14 +163,15 @@ body {
 .pricing .card {
   border: 1px solid black;
   border-radius: 20px;
-  display: flex;
-  justify-content: space-around;
   padding: 2rem 0 3rem 0;
+  width: 100%;
 }
 .pricing .card div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: inline-block;
+  height: 100%;
+  width: calc(50% - 2px);
+  margin: auto;
+  vertical-align: middle;
 }
 .pricing .card--color-blue {
   border-color: #08A6E4;
@@ -180,6 +187,58 @@ body {
 .pricing .button {
   margin-top: -2rem;
   margin-bottom: 2rem;
+}
+
+.contact {
+  padding: 2rem;
+}
+.contact .text--title-1 {
+  margin-bottom: 0;
+}
+.contact label {
+  display: block;
+}
+.contact input[type=text], .contact input[type=email] {
+  display: block;
+  margin: 0.5rem 0;
+  border: none;
+  border-bottom: 1px solid grey;
+  width: 100%;
+}
+.contact .button {
+  margin-right: 0;
+  margin-top: 1rem;
+}
+.contact input[type=checkbox] {
+  vertical-align: middle;
+}
+
+.inline {
+  display: inline;
+}
+
+.inline-block {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.footer {
+  padding: 0.5rem 0.75rem;
+  box-shadow: 0 0 1rem black;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer div {
+  margin: 0 !important;
+}
+.footer .text--logo {
+  font-size: 1.75rem;
+}
+.footer i {
+  vertical-align: middle;
+  margin: 0 0.25rem !important;
 }
 
 /*# sourceMappingURL=styles.css.map */

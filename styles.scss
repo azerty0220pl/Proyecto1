@@ -11,17 +11,15 @@ $--background-grey: #F7F7F7;
 
 body {
     min-width: 320px;
-    max-width: 100%;
 }
 
 .navBar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 0.5rem 0.75rem;
     box-shadow: 0 0 1rem black;
+    width: 100%;
 
     * {
+        width: calc(50% - 2px);
         margin: 0 !important;
     }
 }
@@ -51,6 +49,7 @@ body {
     color: black;
     text-align: center;
     margin-bottom: 1rem;
+    margin-left: auto;
 
     &--size-small {
         font-size: 0.5rem;
@@ -59,10 +58,6 @@ body {
 
     &--type-bold {
         font-weight: 800;
-    }
-
-    &--type-light {
-        color: grey;
     }
 
     &--type-spaced {
@@ -84,6 +79,7 @@ body {
         font-size: 2rem;
         display: inline-block;
         font-weight: 300;
+        margin: 0;
     }
 
     &--color-blue {
@@ -108,17 +104,29 @@ body {
         margin: 0;
     }
 
+    &--color-grey {
+        color: grey;
+    }
+
     &--align-start{
         text-align: start;
+    }
+
+    &--align-end{
+        text-align: end;
     }
 
     &--price {
         font-size: 2.5rem;
     }
+
+    &--margin-small {
+        margin-bottom: 0.3rem;
+    }
 }
 
 .button {
-    height: 4rem;
+    height: 3rem;
     border-radius: 2rem;
     margin: auto;
     display: block;
@@ -185,14 +193,17 @@ body {
     .card{
         border: 1px solid black;
         border-radius: 20px;
-        display: flex;
-        justify-content: space-around;
         padding: 2rem 0 3rem 0;
+        width: 100%;
 
         div {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            display: inline-block;
+            height: 100%;
+            width: calc(50% - 2px);
+            margin: auto;
+            vertical-align: middle;
+
+            
         }
 
         &--color-blue {
@@ -213,5 +224,65 @@ body {
     .button {
         margin-top: -2rem;
         margin-bottom: 2rem;
+    }
+}
+
+.contact {
+    padding: 2rem;
+
+    .text--title-1 {
+        margin-bottom: 0;
+    }
+
+    label {
+        display: block;
+    }
+
+    input[type="text"], input[type="email"] {
+        display: block;
+        margin: 0.5rem 0;
+        border: none;
+        border-bottom: 1px solid grey;
+        width: 100%;
+    }
+
+    .button {
+        margin-right: 0;
+        margin-top: 1rem;
+    }
+
+    input[type="checkbox"] {
+        vertical-align: middle;
+    }
+}
+
+.inline {
+    display: inline;
+}
+
+.inline-block {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.footer {
+    padding: 0.5rem 0.75rem;
+    box-shadow: 0 0 1rem black;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    div {
+        margin: 0 !important;
+    }
+
+    .text--logo {
+        font-size: 1.75rem;
+    }
+
+    i {
+        vertical-align: middle;
+        margin: 0 0.25rem !important;
     }
 }

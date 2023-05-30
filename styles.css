@@ -45,6 +45,10 @@ body {
   text-align: center;
   margin-bottom: 1rem;
 }
+.text--size-small {
+  font-size: 0.5rem;
+  margin: 0;
+}
 .text--type-bold {
   font-weight: 800;
 }
@@ -71,16 +75,35 @@ body {
 .text--color-blue {
   color: #08A6E4;
 }
+.text--color-pink {
+  color: #FB3B64;
+}
+.text--color-green {
+  color: #55DFB4;
+}
+.text--color-accept {
+  color: #00FF00;
+  margin: 0;
+}
+.text--color-deny {
+  color: #ff0000;
+  margin: 0;
+}
 .text--align-start {
   text-align: start;
+}
+.text--price {
+  font-size: 2.5rem;
 }
 
 .button {
   height: 4rem;
   border-radius: 2rem;
   margin: auto;
+  display: block;
   border: none;
   font-weight: 700;
+  width: 50%;
 }
 .button--width-full {
   width: 100%;
@@ -89,6 +112,14 @@ body {
   background-color: #08A6E4;
   color: white;
   box-shadow: 0.1rem 0.1rem 0.5rem #08A6E4;
+}
+.button--color-pink {
+  background-color: #FB3B64;
+  color: white;
+}
+.button--color-green {
+  background-color: #55DFB4;
+  color: white;
 }
 
 .benefits {
@@ -116,8 +147,39 @@ body {
   background-color: #55DFB4;
   border-radius: 5px;
   padding: 2rem;
-  margin: -1rem;
-  margin-top: 1rem;
+  margin-top: -2.25rem;
+  border: 1px solid lightgrey;
+}
+
+.pricing {
+  padding: 2rem;
+}
+.pricing .card {
+  border: 1px solid black;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem 0 3rem 0;
+}
+.pricing .card div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.pricing .card--color-blue {
+  border-color: #08A6E4;
+  box-shadow: 0.1rem 0.1rem 0.5rem #08A6E4;
+  margin: 0 -1rem;
+}
+.pricing .card--color-pink {
+  border-color: #FB3B64;
+}
+.pricing .card--color-green {
+  border-color: #55DFB4;
+}
+.pricing .button {
+  margin-top: -2rem;
+  margin-bottom: 2rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -127,6 +127,9 @@ body {
 .text--margin-small {
   margin-bottom: 0.3rem;
 }
+.text--state-selected {
+  color: black;
+}
 
 .button {
   height: 3rem;
@@ -296,6 +299,10 @@ body {
   font-size: 1.25rem;
 }
 
+.invisible {
+  display: none;
+}
+
 @media only screen and (min-width: 1000px) {
   .background {
     left: 0;
@@ -360,6 +367,10 @@ body {
   .last-card .card p {
     width: 66.6%;
     margin-left: 0;
+  }
+  .text--state-selected {
+    color: black;
+    border-bottom: 3px solid #08A6E4;
   }
   .line {
     display: block;

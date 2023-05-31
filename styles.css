@@ -32,6 +32,10 @@ body {
 .navBar .menu--platform-pc {
   display: none;
 }
+.navBar button {
+  margin-left: 45% !important;
+  width: 2rem;
+}
 
 .home {
   padding: 0 2rem;
@@ -59,6 +63,7 @@ body {
   margin-bottom: 1rem;
   margin-left: auto;
   text-decoration: none;
+  background-color: white;
 }
 .text--size-small {
   font-size: 0.75rem;
@@ -147,6 +152,10 @@ body {
 .button--color-green {
   background-color: #55DFB4;
   color: white;
+}
+
+.button:hover {
+  cursor: pointer;
 }
 
 .benefits {

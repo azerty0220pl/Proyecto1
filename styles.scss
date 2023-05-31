@@ -41,6 +41,11 @@ body {
     .menu--platform-pc {
         display: none;
     }
+
+    button {
+        margin-left: 45% !important;
+        width: 2rem;
+    }
 }
 
 .home {
@@ -70,6 +75,7 @@ body {
     margin-bottom: 1rem;
     margin-left: auto;
     text-decoration: none;
+    background-color: white;
 
     &--size-small {
         font-size: 0.75rem;
@@ -179,6 +185,10 @@ body {
         background-color: $--color-green;
         color: white;
     }
+}
+
+.button:hover {
+    cursor: pointer;
 }
 
 .benefits {

@@ -14,9 +14,12 @@ body {
 }
 
 .navBar {
+    position: fixed;
     padding: 0.5rem 0.75rem;
     box-shadow: 0 0 1rem black;
     width: 100%;
+    background-color: white;
+    z-index: 10;
 
     * {
         width: calc(50% - 2px);
@@ -50,6 +53,7 @@ body {
     text-align: center;
     margin-bottom: 1rem;
     margin-left: auto;
+    text-decoration: none;
 
     &--size-small {
         font-size: 0.75rem;
@@ -112,11 +116,11 @@ body {
         color: grey;
     }
 
-    &--align-start{
+    &--align-start {
         text-align: start;
     }
 
-    &--align-end{
+    &--align-end {
         text-align: end;
     }
 
@@ -149,12 +153,12 @@ body {
         color: white;
         box-shadow: 0.1rem 0.1rem 0.5rem $--color-blue;
     }
-    
+
     &--color-pink {
         background-color: $--color-pink;
         color: white;
     }
-    
+
     &--color-green {
         background-color: $--color-green;
         color: white;
@@ -195,11 +199,11 @@ body {
 }
 
 .pricing {
-    .card-holder{
+    .card-holder {
         padding: 2rem;
     }
 
-    .card{
+    .card {
         border: 1px solid black;
         border-radius: 20px;
         padding-top: 2rem;
@@ -212,7 +216,7 @@ body {
             margin: auto;
             vertical-align: middle;
 
-            
+
         }
 
         &--color-blue {
@@ -225,7 +229,7 @@ body {
         &--color-pink {
             border-color: $--color-pink;
         }
-        
+
         &--color-green {
             border-color: $--color-green;
         }
@@ -248,7 +252,8 @@ body {
         display: block;
     }
 
-    input[type="text"], input[type="email"] {
+    input[type="text"],
+    input[type="email"] {
         display: block;
         margin: 0.5rem 0;
         border: none;
@@ -362,7 +367,8 @@ body {
             width: calc(40% - 4rem);
         }
 
-        .card, .wrapper {
+        .card,
+        .wrapper {
             display: flex;
             flex-direction: column;
             height: 100%;
@@ -425,7 +431,7 @@ body {
                 width: 45%;
             }
 
-            &--color-blue{
+            &--color-blue {
                 margin: -2rem 0;
 
                 div:last-of-type {
@@ -466,5 +472,40 @@ body {
         form {
             width: 50%;
         }
+    }
+
+    .navBar {
+        padding: 0 1rem;
+
+        p {
+            margin-top: 0.5rem !important;
+        }
+    }
+
+    .menu {
+        height: 3rem;
+
+        div {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+
+        a {
+            display: inline-block;
+            margin-left: 5%;
+            width: 20%;
+            padding: calc(1rem - 3px) 0;
+            vertical-align: center;
+        }
+
+        a:active {
+            color: black;
+            border-bottom: 3px solid $--color-blue;
+        }
+
+        width: 45%;
     }
 }

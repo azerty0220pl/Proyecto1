@@ -9,9 +9,12 @@ body {
 }
 
 .navBar {
+  position: fixed;
   padding: 0.5rem 0.75rem;
   box-shadow: 0 0 1rem black;
   width: 100%;
+  background-color: white;
+  z-index: 10;
 }
 .navBar * {
   width: calc(50% - 2px);
@@ -43,6 +46,7 @@ body {
   text-align: center;
   margin-bottom: 1rem;
   margin-left: auto;
+  text-decoration: none;
 }
 .text--size-small {
   font-size: 0.75rem;
@@ -204,7 +208,8 @@ body {
 .contact label {
   display: block;
 }
-.contact input[type=text], .contact input[type=email] {
+.contact input[type=text],
+.contact input[type=email] {
   display: block;
   margin: 0.5rem 0;
   border: none;
@@ -299,7 +304,8 @@ body {
   .last-card .wrapper {
     width: calc(40% - 4rem);
   }
-  .last-card .card, .last-card .wrapper {
+  .last-card .card,
+  .last-card .wrapper {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -380,6 +386,34 @@ body {
   }
   .contact form {
     width: 50%;
+  }
+  .navBar {
+    padding: 0 1rem;
+  }
+  .navBar p {
+    margin-top: 0.5rem !important;
+  }
+  .menu {
+    height: 3rem;
+    width: 45%;
+  }
+  .menu div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+  .menu a {
+    display: inline-block;
+    margin-left: 5%;
+    width: 20%;
+    padding: calc(1rem - 3px) 0;
+    vertical-align: center;
+  }
+  .menu a:active {
+    color: black;
+    border-bottom: 3px solid #08A6E4;
   }
 }
 

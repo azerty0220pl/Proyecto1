@@ -33,8 +33,9 @@ body {
   display: none;
 }
 .navBar button {
-  margin-left: 45% !important;
+  margin-left: calc(50% - 3rem) !important;
   width: 2rem;
+  height: 2rem;
 }
 
 .home {

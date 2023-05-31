@@ -248,6 +248,15 @@ body {
 .contact input[type=checkbox] {
   vertical-align: middle;
 }
+.contact .table {
+  display: table-row;
+}
+.contact .table * {
+  display: table-cell;
+}
+.contact .table p {
+  padding-left: 0.5rem;
+}
 
 .inline {
   display: inline;

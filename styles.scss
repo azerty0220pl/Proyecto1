@@ -298,6 +298,18 @@ body {
     input[type="checkbox"] {
         vertical-align: middle;
     }
+
+    .table {
+        display: table-row;
+
+        * {
+            display: table-cell;
+        }
+
+        p {
+            padding-left: 0.5rem;
+        }
+    }
 }
 
 .inline {

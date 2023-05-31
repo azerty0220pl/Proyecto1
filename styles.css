@@ -178,6 +178,9 @@ body {
   border: 1px solid lightgrey;
 }
 
+.pricing {
+  margin-top: 4rem;
+}
 .pricing .card-holder {
   padding: 2rem;
 }

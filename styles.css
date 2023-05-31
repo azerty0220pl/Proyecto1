@@ -29,6 +29,9 @@ body {
 .navBar a:active {
   color: black;
 }
+.navBar .menu--platform-pc {
+  display: none;
+}
 
 .home {
   padding: 0 2rem;
@@ -194,8 +197,8 @@ body {
 .pricing .card--color-blue {
   border-color: #08A6E4;
   box-shadow: 0.1rem 0.1rem 0.5rem #08A6E4;
-  margin: 3rem -4%;
-  width: 108%;
+  margin: 3rem -1rem;
+  width: calc(100% + 2rem);
 }
 .pricing .card--color-pink {
   border-color: #FB3B64;
@@ -265,7 +268,7 @@ body {
   margin: 0 0.25rem !important;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1000px) {
   .background {
     left: 0;
     margin-left: -2rem;
@@ -289,7 +292,7 @@ body {
     justify-content: space-between;
   }
   .benefits .card div {
-    width: 40rem;
+    width: 40%;
   }
   .benefits .card--direction-reverse {
     flex-direction: row-reverse;
@@ -327,13 +330,13 @@ body {
     align-items: start;
   }
   .last-card .card p {
-    width: 40rem;
+    width: 66.6%;
     margin-left: 0;
   }
   .line {
     display: block;
     border: 1px solid black;
-    width: 30rem;
+    width: 50%;
     height: 2px;
     margin-top: 3rem;
   }
@@ -345,6 +348,7 @@ body {
   }
   .line--color-green {
     border-color: #55DFB4;
+    width: 33.3%;
   }
   .pricing .card-holder {
     width: 75%;
@@ -413,8 +417,14 @@ body {
     height: 3rem;
     width: 45%;
   }
+  .menu--platform-mobile {
+    display: none !important;
+  }
+  .menu--platform-pc {
+    display: inline-block !important;
+  }
   .menu div {
-    display: flex;
+    display: flex !important;
     justify-content: space-around;
     align-items: center;
     height: 100%;

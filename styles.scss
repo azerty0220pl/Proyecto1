@@ -16,7 +16,7 @@ body {
 .navBar {
     position: fixed;
     padding: 0.5rem 0.75rem;
-    box-shadow: 0 0 1rem black;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
     width: 100%;
     background-color: white;
     z-index: 10;
@@ -32,10 +32,10 @@ body {
 
     a {
         margin-bottom: 1rem !important;
-    }
 
-    a:active {
-        color: black;
+        &:active {
+            color: black;
+        }
     }
 
     .menu--platform-pc {
@@ -174,7 +174,7 @@ body {
     &--color-blue {
         background-color: $--color-blue;
         color: white;
-        box-shadow: 0.1rem 0.1rem 0.5rem $--color-blue;
+        box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
     }
 
     &--color-pink {
@@ -186,10 +186,10 @@ body {
         background-color: $--color-green;
         color: white;
     }
-}
-
-.button:hover {
-    cursor: pointer;
+    
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .benefits {
@@ -244,13 +244,11 @@ body {
             width: calc(50% - 2px);
             margin: auto;
             vertical-align: middle;
-
-
         }
 
         &--color-blue {
             border-color: $--color-blue;
-            box-shadow: 0.1rem 0.1rem 0.5rem $--color-blue;
+            box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
             margin: 3rem -1rem;
             width: calc(100% + 2rem);
         }
@@ -274,7 +272,7 @@ body {
     padding: 2rem;
 
     .text--title-1 {
-        margin-bottom: 0;
+        margin-bottom: 1rem;
     }
 
     label {
@@ -297,6 +295,10 @@ body {
 
     input[type="checkbox"] {
         vertical-align: middle;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     .table {
@@ -308,6 +310,10 @@ body {
 
         p {
             padding-left: 0.5rem;
+        }
+
+        &:hover {
+            cursor: pointer;
         }
     }
 }
@@ -327,7 +333,7 @@ body {
 
 .footer {
     padding: 0.5rem 0.75rem;
-    box-shadow: 0 0 1rem black;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -341,9 +347,10 @@ body {
         font-size: 1.75rem;
     }
 
-    i {
+    a {
         vertical-align: middle;
-        margin: 0 0.25rem !important;
+        margin: 0 0.5rem !important;
+        font-size: 1.25rem;
     }
 }
 
@@ -524,7 +531,7 @@ body {
             justify-content: start;
             gap: 2rem;
             margin: 0;
-            margin-top: 4rem;
+            margin-top: 2rem;
             * {
                 margin: 0;
             }
@@ -568,13 +575,12 @@ body {
             width: 20%;
             padding: calc(1rem - 3px) 0;
             vertical-align: center;
-        }
 
-        a:active {
-            color: black;
-            border-bottom: 3px solid $--color-blue;
+            &:active {
+                color: black;
+                border-bottom: 3px solid $--color-blue;
+            }
         }
-
         width: 45%;
     }
 }

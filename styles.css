@@ -368,6 +368,19 @@ body {
   .footer {
     padding: 0.5rem 8rem;
   }
+  .contact {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 8rem;
+    width: 60%;
+  }
+  .contact div {
+    width: 40%;
+  }
+  .contact form {
+    width: 50%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -399,10 +399,20 @@ body {
     width: 60%;
   }
   .contact div {
-    width: 40%;
+    width: 50%;
   }
   .contact form {
     width: 50%;
+  }
+  .contact .card-holder {
+    width: 100%;
+    justify-content: start;
+    gap: 2rem;
+    margin: 0;
+    margin-top: 4rem;
+  }
+  .contact .card-holder * {
+    margin: 0;
   }
   .navBar {
     padding: 0 1rem;

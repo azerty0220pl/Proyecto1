@@ -2,6 +2,7 @@ const toggler = document.querySelector('button');
 const navBar = document.querySelector(".navBar");
 const menu = document.querySelector(".mobile-toggle");
 const buttons = document.querySelectorAll(".nav-btn");
+const scroll = document.querySelector(".scroll");
 
 toggler.addEventListener('click', () => {
     if (toggler.classList.contains("fa-bars")) {
@@ -25,4 +26,10 @@ buttons.forEach((btn) => {
         toggler.classList.remove("fa-xmark");
         menu.classList.add("invisible");
     })
+});
+
+document.addEventListener("scroll", () => {
+    let scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+    let percentege = Math.round(scrollPosition / (document.documentElement.scrollHeight - window.innerHeight) * 100);
+    scroll.style.width = percentege + "%";
 });

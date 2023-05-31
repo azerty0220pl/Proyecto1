@@ -8,6 +8,13 @@ body {
   min-width: 320px;
 }
 
+.scroll {
+  position: fixed;
+  height: 2px;
+  border: 2px solid #08A6E4;
+  z-index: 20;
+}
+
 .navBar {
   position: fixed;
   padding: 0.5rem 0.75rem;

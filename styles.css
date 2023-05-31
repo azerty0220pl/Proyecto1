@@ -28,7 +28,6 @@ body {
 }
 .navBar a:active {
   color: black;
-  background-color: white;
 }
 
 .home {
@@ -407,6 +406,9 @@ body {
   .navBar p {
     margin-top: 0.5rem !important;
   }
+  .navBar div {
+    margin: 0 !important;
+  }
   .menu {
     height: 3rem;
     width: 45%;
@@ -422,7 +424,7 @@ body {
     display: inline-block;
     margin-left: 5%;
     width: 20%;
-    padding: calc(1rem - 3px) 0;
+    padding: calc(1.5rem - 3px) 0;
     vertical-align: center;
   }
   .menu a:active {

@@ -496,6 +496,10 @@ body {
         p {
             margin-top: 0.5rem !important;
         }
+
+        div {
+            margin: 0 !important;
+        }
     }
 
     .menu {
@@ -513,7 +517,7 @@ body {
             display: inline-block;
             margin-left: 5%;
             width: 20%;
-            padding: calc(1rem - 3px) 0;
+            padding: calc(1.5rem - 3px) 0;
             vertical-align: center;
         }
 

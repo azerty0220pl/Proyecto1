@@ -25,11 +25,23 @@ body {
         width: calc(50% - 2px);
         margin: 0 !important;
     }
+
+    div {
+        margin-top: 2rem !important;
+    }
+
+    a {
+        margin-bottom: 1rem !important;
+    }
+
+    a:active {
+        color: black;
+    }
 }
 
 .home {
     padding: 0 2rem;
-    padding-top: 8rem;
+    padding-top: 11rem;
     overflow: hidden;
 
     .img {
@@ -278,6 +290,10 @@ body {
 .inline-block {
     display: inline-block;
     vertical-align: middle;
+}
+
+.block {
+    display: block;
 }
 
 .footer {

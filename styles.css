@@ -20,10 +20,20 @@ body {
   width: calc(50% - 2px);
   margin: 0 !important;
 }
+.navBar div {
+  margin-top: 2rem !important;
+}
+.navBar a {
+  margin-bottom: 1rem !important;
+}
+.navBar a:active {
+  color: black;
+  background-color: white;
+}
 
 .home {
   padding: 0 2rem;
-  padding-top: 8rem;
+  padding-top: 11rem;
   overflow: hidden;
 }
 .home .img {
@@ -231,6 +241,10 @@ body {
 .inline-block {
   display: inline-block;
   vertical-align: middle;
+}
+
+.block {
+  display: block;
 }
 
 .footer {

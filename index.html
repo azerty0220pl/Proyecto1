@@ -29,6 +29,21 @@
             </div>
         </div>
     </div>
+    <div class="popup-wrapper">
+        <button class="fa-solid fa-xmark close"></button>
+        <div class="popup">
+            <p class="text text--title-1">Subscribe to our newsletter!</p>
+            <p class="text">Do you want to receive information about us you don't care about?</p>
+            <p class="text">Sign up and fill your inbox with spam!</p>
+            <form id="popup-form">
+                <label for="email">
+                    <p class="text text--color-blue text--spaced-1 text--size-small text--align-start">Email</p>
+                    <input type="text" id="email" />
+                </label>
+                <input type="submit" id="submit" class="button button--color-blue submit" value="Subscribe!" />
+            </form>
+        </div>
+    </div>
     <div id="home" class="home">
         <p class="text text--title-1">Sell More!</p>
         <p class="text">Open shop on your platform and increase your sales</p>
@@ -166,24 +181,24 @@
                 <p class="text text--color-grey text--align-start"><i class="fa-solid fa-phone text text--color-blue"></i>123 456 789</p>
             </div>
         </div>
-        <form action="">
+        <form id="contact-form">
             <label id="name-label" for="name">
                 <p class="text text--color-blue text--spaced-1 text--size-small text--align-start">Name</p>
-                <input type="text" id="name" required />
+                <input type="text" id="name" />
             </label>
             <label id="email-label" for="email">
                 <p class="text text--color-blue text--spaced-1 text--size-small text--align-start">Email</p>
-                <input type="email" id="email" required />
+                <input type="text" id="email" />
             </label>
-            <label class="table">
-                <input type="checkbox" value="data-protection" required />
+            <label for="consent" class="table">
+                <input type="checkbox" id="consent" />
                 <p class="inline text text--color-grey text--align-start text--size-small">I hereby give consent for my
                     personal data included in my application to be processed for the purposes of the recruitment
                     process under the European Parliament's and Council of the European Union Regulation on the
                     Protection of Natural of such data, and repealing Directive 95/46/EC (Data Protection Directive)
                 </p>
             </label>
-            <input class="button button--color-blue" type="submit" id="submit" value="Send" />
+            <input type="submit" id="submit" class="button button--color-blue submit" value="Send" />
         </form>
     </div>
     <button class="fa-solid fa-arrow-up scroll-top"></button>

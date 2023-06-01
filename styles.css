@@ -84,9 +84,13 @@ body {
   padding: 2rem;
 }
 
+.sec {
+  margin-top: 3rem;
+}
+
 .home {
   padding: 0 2rem;
-  padding-top: 11rem;
+  padding-top: 8rem;
   overflow: hidden;
 }
 .home .img {
@@ -218,7 +222,7 @@ body {
 
 .benefits {
   background-color: #F7F7F7;
-  padding: 2rem;
+  padding: 4rem 2rem;
 }
 .benefits .card {
   background-color: white;
@@ -246,7 +250,7 @@ body {
 }
 
 .pricing {
-  margin-top: 4rem;
+  padding-top: 4rem;
 }
 .pricing .card-holder {
   padding: 2rem;
@@ -353,6 +357,10 @@ input[type=text] {
   display: block;
 }
 
+.invisible {
+  display: none;
+}
+
 .footer {
   padding: 0.5rem 0.75rem;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
@@ -373,8 +381,23 @@ input[type=text] {
   font-size: 1.25rem;
 }
 
-.invisible {
+.slider {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin: auto;
+  margin-top: 8rem;
+  background-color: black;
+  width: 75%;
+  aspect-ratio: 16/9;
+}
+
+.slider-image {
   display: none;
+  position: relative;
+  width: 100%;
+  transition: none;
+  left: 0;
 }
 
 @media only screen and (min-width: 1000px) {

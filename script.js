@@ -203,3 +203,70 @@ plnBtn.addEventListener("click", () => {
         });
     });
 });
+
+//Slider
+
+class Slider {
+    constructor(id) {
+        this.id = document.querySelector("#" + id);
+        this.elems = Array.from(this.id.parentNode.children);
+        this.cur = this.elems.indexOf(this.id);
+        this.id.style.display = "inline-block";
+    }
+
+    async next() {
+        let x = this.cur;
+        this.cur = this.cur == this.elems.length - 1 ? 0 : this.cur + 1;
+
+        if(this.cur == 0) {
+            this.elems[x].style.left = "-100%";
+            this.elems[this.cur].style.zIndex = "10";
+        }
+        
+        this.elems[this.cur].style.left = this.cur == 0 ? "100%" : "0";
+        this.elems[this.cur].style.display = "inline-block";
+        this.elems[this.cur].style.transition = "0.1s";
+
+        setTimeout(() => {
+            console.log("move");
+            this.elems[this.cur].style.left = this.cur == 0 ? "0" : "-100%";
+        }, 10);
+
+        setTimeout(() => {
+            console.log("hide");
+            this.elems[x].style.display = "none";
+            this.elems[this.cur].style.left = "0";
+            this.elems[this.cur].style.transition = "none";
+            this.elems[this.cur].style.zIndex = "0";
+        }, 125);
+    }
+
+    async prev() {
+        let x = this.cur;
+        this.cur = this.cur == 0 ? this.elems.length - 1 : this.cur - 1;
+
+        this.elems[this.cur].style.zIndex = "10";
+        this.elems[this.cur].style.left = this.cur == this.elems.length - 1 ? "-200%" : "-100%";
+        this.elems[x].style.left = this.cur == this.elems.length - 1 ? "0" : "-100%";
+        this.elems[this.cur].style.display = "inline-block";
+        this.elems[this.cur].style.transition = "0.1s";
+
+        setTimeout(() => {
+            console.log("move");
+            this.elems[this.cur].style.left = this.cur == this.elems.length - 1 ? "-100%" : "0";
+        }, 10);
+
+        setTimeout(() => {
+            console.log("hide");
+            this.elems[x].style.display = "none";
+            this.elems[this.cur].style.left = "0";
+            this.elems[this.cur].style.transition = "none";
+            this.elems[this.cur].style.zIndex = "0";
+        }, 125);
+    }
+}
+
+const slider = new Slider("img-4");
+//setTimeout(() => {slider.next()}, 6000);
+//setTimeout(() => {console.log("hello")}, 3000);
+//setTimeout(() => {slider.next()}, 8000);

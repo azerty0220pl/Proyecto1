@@ -1,14 +1,30 @@
+//menu
 const toggler = document.querySelector('button');
 const navBar = document.querySelector(".navBar");
 const menu = document.querySelector(".mobile-toggle");
 const buttons = document.querySelectorAll(".nav-btn");
+
+//scrolling
 const scroll = document.querySelector(".scroll");
 const scrollTop = document.querySelector(".scroll-top");
+
+//contact form
 const form = document.querySelector("#contact-form");
+
+//popup
 const popup = document.querySelector(".popup-wrapper");
 const popupForm = document.querySelector("#popup-form");
 const closePopup = document.querySelector(".close");
 
+//currencies
+const eurBtn = document.querySelector("#eur");
+const usdBtn = document.querySelector("#usd");
+const gbpBtn = document.querySelector("#gbp");
+const plnBtn = document.querySelector("#pln");
+const priceElem = [document.querySelector(".price-1"), document.querySelector(".price-2"), document.querySelector(".price-3")];
+const prices = [0, 25, 60];
+
+//menu mobile toggler
 toggler.addEventListener('click', () => {
     if (toggler.classList.contains("fa-bars")) {
         toggler.classList.add("fa-xmark");
@@ -21,6 +37,7 @@ toggler.addEventListener('click', () => {
     }
 });
 
+//menu highlight last clicked
 buttons.forEach((btn) => {
     btn.addEventListener('click', () => {
         buttons.forEach(b => {
@@ -33,6 +50,7 @@ buttons.forEach((btn) => {
     })
 });
 
+//scroll bar on top & enable popup
 document.addEventListener("scroll", () => {
     let scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
     let percentege = Math.round(scrollPosition / (document.documentElement.scrollHeight - window.innerHeight) * 100);
@@ -44,13 +62,14 @@ document.addEventListener("scroll", () => {
     }
 });
 
-
+//scroll to top
 scrollTop.addEventListener('click', () => {
     setTimeout(() => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }, 200);
 });
 
+//contact form
 form.addEventListener("submit", (event) => {
     event.preventDefault();
     let checks = 0;
@@ -98,6 +117,7 @@ form.addEventListener("submit", (event) => {
     }
 }, true);
 
+//enable popup after 5s
 setTimeout(() => {
     if (localStorage.getItem("popup") != "dont") {
         popup.style.display = "block";
@@ -105,6 +125,7 @@ setTimeout(() => {
     }
 }, 5000);
 
+//disable popup
 document.addEventListener("click", event => {
     if (event.target == popup)
         popup.style.display = "none";
@@ -118,6 +139,7 @@ document.onkeydown = (ev) => {
         popup.style.display = "none";
 };
 
+//popup form
 popupForm.addEventListener("submit", (event) => {
     event.preventDefault();
     let email = event.target.email.value;
@@ -141,3 +163,43 @@ popupForm.addEventListener("submit", (event) => {
     else
         event.target.email.style.borderColor = "red";
 }, true);
+
+//currencies
+eurBtn.addEventListener("click", () => {
+    fetch("https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd/eur.min.json").then(res => {
+        res.json().then(data => {
+            let x = data.eur;
+
+            for (let i = 0; i < prices.length; i++)
+                priceElem[i].innerText = "€" + (Math.round((prices[i] * x + Number.EPSILON) * 100) / 100);
+        });
+    });
+});
+
+usdBtn.addEventListener("click", () => {
+    for (let i = 0; i < prices.length; i++) {
+        priceElem[i].innerText = "$" + prices[i];
+    }
+});
+
+gbpBtn.addEventListener("click", () => {
+    fetch("https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd/gbp.min.json").then(res => {
+        res.json().then(data => {
+            let x = data.gbp;
+
+            for (let i = 0; i < prices.length; i++)
+                priceElem[i].innerText = "£" + (Math.round((prices[i] * x + Number.EPSILON) * 100) / 100);
+        });
+    });
+});
+
+plnBtn.addEventListener("click", () => {
+    fetch("https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd/pln.min.json").then(res => {
+        res.json().then(data => {
+            let x = data.pln;
+
+            for (let i = 0; i < prices.length; i++)
+                priceElem[i].innerText = (Math.round((prices[i] * x + Number.EPSILON) * 100) / 100) + " zł";
+        });
+    });
+});

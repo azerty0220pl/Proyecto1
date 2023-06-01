@@ -193,6 +193,8 @@ body {
 .button--color-blue {
   background-color: #08A6E4;
   color: white;
+}
+.button--shadow-blue {
   box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
 }
 .button--color-pink {
@@ -202,6 +204,13 @@ body {
 .button--color-green {
   background-color: #55DFB4;
   color: white;
+}
+.button--size-small {
+  width: 3rem !important;
+}
+.button--color-transparent {
+  background-color: transparent;
+  color: #08A6E4;
 }
 .button:hover {
   cursor: pointer;
@@ -283,6 +292,11 @@ body {
 .pricing .button {
   margin-top: 3rem;
   margin-bottom: -1.5rem;
+}
+.pricing .currencies {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
 }
 
 .contact {

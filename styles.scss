@@ -226,6 +226,9 @@ body {
     &--color-blue {
         background-color: $--color-blue;
         color: white;
+    }
+
+    &--shadow-blue{
         box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
     }
 
@@ -237,6 +240,15 @@ body {
     &--color-green {
         background-color: $--color-green;
         color: white;
+    }
+
+    &--size-small {
+        width: 3rem !important;
+    }
+
+    &--color-transparent {
+        background-color: transparent;
+        color: $--color-blue;
     }
     
     &:hover {
@@ -333,6 +345,12 @@ body {
     .button {
         margin-top: 3rem;
         margin-bottom: -1.5rem;
+    }
+
+    .currencies {
+        display: flex;
+        justify-content: space-around;
+        padding: 2rem;
     }
 }
 

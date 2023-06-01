@@ -90,7 +90,7 @@ form.addEventListener("submit", (event) => {
             headers: {
                 'Content-type': 'application/json; charset=UTF-8',
             },
-        }).then((response) => {
+        }).then(() => {
             event.target.name.value = '';
             event.target.email.value = '';
             event.target.consent.checked = false;
@@ -99,7 +99,7 @@ form.addEventListener("submit", (event) => {
 }, true);
 
 setTimeout(() => {
-    if (localStorage.getItem("popup") != "d ont") {
+    if (localStorage.getItem("popup") != "dont") {
         popup.style.display = "block";
         localStorage.setItem("popup", "dont");
     }
@@ -117,3 +117,27 @@ document.onkeydown = (ev) => {
     if (ev.key == "Escape")
         popup.style.display = "none";
 };
+
+popupForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    let email = event.target.email.value;
+    let emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+
+    if (emailRegex.test(email)) {
+        event.target.email.style.borderColor = "grey";
+        fetch('https://jsonplaceholder.typicode.com/posts', {
+            method: 'POST',
+            body: JSON.stringify({
+                body: email
+            }),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+            },
+        }).then(() => {
+            event.target.email.value = '';
+            popup.style.display = "none";
+        });
+    }
+    else
+        event.target.email.style.borderColor = "red";
+}, true);

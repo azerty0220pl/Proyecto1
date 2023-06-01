@@ -140,7 +140,7 @@ body {
 
 .button {
   height: 3rem;
-  border-radius: 2rem;
+  border-radius: 1.5rem;
   margin: auto;
   display: block;
   border: none;
@@ -235,6 +235,7 @@ body {
 
 .contact {
   padding: 2rem;
+  padding-bottom: 0;
 }
 .contact .text--title-1 {
   margin-bottom: 1rem;
@@ -497,6 +498,21 @@ body {
     color: black;
     border-bottom: 3px solid #08A6E4;
   }
+}
+.scroll-top {
+  color: #08A6E4;
+  position: relative;
+  margin-bottom: 1rem;
+  left: 2rem;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: white;
+  border: none;
+}
+.scroll-top:hover {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -170,7 +170,7 @@ body {
 
 .button {
     height: 3rem;
-    border-radius: 2rem;
+    border-radius: 1.5rem;
     margin: auto;
     display: block;
     border: none;
@@ -281,6 +281,7 @@ body {
 
 .contact {
     padding: 2rem;
+    padding-bottom: 0;
 
     .text--title-1 {
         margin-bottom: 1rem;
@@ -602,5 +603,22 @@ body {
             }
         }
         width: 45%;
+    }
+}
+
+.scroll-top {
+    color: $--color-blue;
+    position: relative;
+    margin-bottom: 1rem;
+    left: 2rem;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: white;
+    border: none;
+
+    &:hover {
+        cursor: pointer;
     }
 }

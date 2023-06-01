@@ -3,6 +3,7 @@ const navBar = document.querySelector(".navBar");
 const menu = document.querySelector(".mobile-toggle");
 const buttons = document.querySelectorAll(".nav-btn");
 const scroll = document.querySelector(".scroll");
+const scrollTop = document.querySelector(".scroll-top");
 
 toggler.addEventListener('click', () => {
     if (toggler.classList.contains("fa-bars")) {
@@ -32,4 +33,11 @@ document.addEventListener("scroll", () => {
     let scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
     let percentege = Math.round(scrollPosition / (document.documentElement.scrollHeight - window.innerHeight) * 100);
     scroll.style.width = percentege + "%";
+});
+
+
+scrollTop.addEventListener('click', () => {
+    setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 200)
 });

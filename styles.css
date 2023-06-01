@@ -218,6 +218,9 @@ body {
 }
 .pricing .card--color-blue {
   border-color: #08A6E4;
+  margin: 3rem 0;
+}
+.pricing .card--color-blue:hover {
   box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
   margin: 3rem -1rem;
   width: calc(100% + 2rem);
@@ -225,8 +228,18 @@ body {
 .pricing .card--color-pink {
   border-color: #FB3B64;
 }
+.pricing .card--color-pink:hover {
+  box-shadow: 5px 10px 14px rgba(255, 17, 57, 0.29);
+  margin: 0 -1rem;
+  width: calc(100% + 2rem);
+}
 .pricing .card--color-green {
   border-color: #55DFB4;
+}
+.pricing .card--color-green:hover {
+  box-shadow: 5px 10px 14px rgba(40, 204, 127, 0.29);
+  margin: 0 -1rem;
+  width: calc(100% + 2rem);
 }
 .pricing .button {
   margin-top: 3rem;
@@ -412,6 +425,7 @@ body {
   }
   .pricing .card {
     width: 30%;
+    margin: 0;
   }
   .pricing .card div {
     display: block;
@@ -419,20 +433,35 @@ body {
     height: auto;
     width: 45%;
   }
-  .pricing .card--color-blue {
-    margin: -2rem 0;
+  .pricing .card--color-blue:hover {
+    box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+    margin: -1rem 0;
+    width: 35%;
   }
-  .pricing .card--color-blue div:last-of-type {
-    padding-top: 2rem;
+  .pricing .card--color-blue:hover .button {
+    margin-top: 7rem;
+  }
+  .pricing .card--color-pink div:first-of-type {
+    padding-bottom: 0.75rem;
+  }
+  .pricing .card--color-pink:hover {
+    box-shadow: 5px 10px 14px rgba(255, 17, 57, 0.29);
+    margin: -1rem 0;
+    width: 35%;
+  }
+  .pricing .card--color-pink:hover .button {
+    margin-top: 7rem;
+  }
+  .pricing .card--color-green:hover {
+    box-shadow: 5px 10px 14px rgba(40, 204, 127, 0.29);
+    margin: -1rem 0;
+    width: 35% !important;
+  }
+  .pricing .card--color-green:hover .button {
+    margin-top: 7rem;
   }
   .pricing .button {
     width: 40%;
-  }
-  .pricing .button--color-pink {
-    margin-top: 3.75rem;
-    margin-bottom: -2.25rem;
-  }
-  .pricing .button--color-blue {
     margin-top: 5rem;
   }
   .footer {

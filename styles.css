@@ -216,6 +216,41 @@ body {
   background-color: transparent;
   color: #08A6E4;
 }
+.button--slider-left {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  z-index: 5;
+  top: 50%;
+  left: 1rem;
+  background-color: transparent;
+  border: none;
+  color: #08A6E4;
+  font-size: 1.5rem;
+}
+.button--slider-right {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  z-index: 5;
+  top: 50%;
+  right: 1rem;
+  background-color: transparent;
+  border: none;
+  color: #08A6E4;
+  font-size: 1.5rem;
+}
+.button--slider-dot {
+  width: 1rem;
+  height: 1rem;
+  background-color: rgba(7, 171, 230, 0.25);
+  border: 1px solid rgba(7, 171, 230, 0.35);
+  margin: 0;
+}
+.button--slider-selected {
+  background-color: rgba(7, 171, 230, 0.75);
+  border: 1px solid rgb(7, 171, 230);
+}
 .button:hover {
   cursor: pointer;
 }
@@ -383,6 +418,7 @@ input[type=text] {
 
 .slider {
   display: flex;
+  position: relative;
   align-items: center;
   overflow: hidden;
   margin: auto;
@@ -395,8 +431,18 @@ input[type=text] {
 .slider-image {
   display: none;
   position: relative;
-  width: 100%;
+  min-width: 100%;
   transition: none;
+  left: 0;
+}
+
+.dot-wrapper {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  bottom: 1rem;
   left: 0;
 }
 

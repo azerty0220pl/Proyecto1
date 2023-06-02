@@ -68,7 +68,7 @@ body {
     width: 100%;
     z-index: 25;
 
-    .close{
+    .close {
         position: fixed;
         right: 4rem;
         top: 2rem;
@@ -232,7 +232,7 @@ body {
         color: white;
     }
 
-    &--shadow-blue{
+    &--shadow-blue {
         box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
     }
 
@@ -254,7 +254,46 @@ body {
         background-color: transparent;
         color: $--color-blue;
     }
-    
+
+    &--slider-left {
+        position: absolute;
+        width: 2rem;
+        height: 2rem;
+        z-index: 5;
+        top: 50%;
+        left: 1rem;
+        background-color: transparent;
+        border: none;
+        color: $--color-blue;
+        font-size: 1.5rem;
+    }
+
+    &--slider-right {
+        position: absolute;
+        width: 2rem;
+        height: 2rem;
+        z-index: 5;
+        top: 50%;
+        right: 1rem;
+        background-color: transparent;
+        border: none;
+        color: $--color-blue;
+        font-size: 1.5rem;
+    }
+
+    &--slider-dot {
+        width: 1rem;
+        height: 1rem;
+        background-color:rgba(7, 171, 230, 0.25);
+        border: 1px solid rgba(7, 171, 230, 0.35);
+        margin: 0;
+    }
+
+    &--slider-selected {
+        background-color:rgba(7, 171, 230, 0.75);
+        border: 1px solid rgba(7, 171, 230, 1);
+    }
+
     &:hover {
         cursor: pointer;
     }
@@ -450,8 +489,9 @@ input[type="text"] {
 
 .slider {
     display: flex;
+    position: relative;
     align-items: center;
-    overflow:hidden;
+    overflow: hidden;
     margin: auto;
     margin-top: 8rem;
     background-color: black;
@@ -462,8 +502,18 @@ input[type="text"] {
 .slider-image {
     display: none;
     position: relative;
-    width: 100%;
+    min-width: 100%;
     transition: none;
+    left: 0;
+}
+
+.dot-wrapper {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    bottom: 1rem;
     left: 0;
 }
 
@@ -674,6 +724,7 @@ input[type="text"] {
             gap: 2rem;
             margin: 0;
             margin-top: 2rem;
+
             * {
                 margin: 0;
             }
@@ -723,6 +774,7 @@ input[type="text"] {
                 border-bottom: 3px solid $--color-blue;
             }
         }
+
         width: 45%;
     }
 

@@ -3,6 +3,10 @@ $--color-pink: #FB3B64;
 $--color-green: #55DFB4;
 $--background-grey: #F7F7F7;
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -284,13 +288,13 @@ body {
     &--slider-dot {
         width: 1rem;
         height: 1rem;
-        background-color:rgba(7, 171, 230, 0.25);
+        background-color: rgba(7, 171, 230, 0.25);
         border: 1px solid rgba(7, 171, 230, 0.35);
         margin: 0;
     }
 
     &--slider-selected {
-        background-color:rgba(7, 171, 230, 0.75);
+        background-color: rgba(7, 171, 230, 0.75);
         border: 1px solid rgba(7, 171, 230, 1);
     }
 

@@ -387,6 +387,9 @@ input[type=text] {
   border-bottom: 1px solid grey;
   width: 100%;
 }
+input[type=text]:focus {
+  outline: none;
+}
 
 .inline {
   display: inline;
@@ -662,16 +665,18 @@ input[type=text] {
   }
 }
 .scroll-top {
+  display: none;
   color: #08A6E4;
-  position: relative;
-  margin-bottom: 1rem;
+  position: fixed;
+  bottom: 2rem;
   left: 2rem;
   width: 2rem;
   height: 2rem;
   font-size: 1.5rem;
   font-weight: bold;
-  background-color: white;
+  background-color: transparent;
   border: none;
+  transition: all 1s;
 }
 .scroll-top:hover {
   cursor: pointer;

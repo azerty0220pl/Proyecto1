@@ -1,6 +1,6 @@
 const scroll = document.querySelector(".scroll");
 const scrollTop = document.querySelector(".scroll-top");
-const popup = document.querySelector(".popup-wrapper");
+const popupElem = document.querySelector(".popup-wrapper");
 
 //scroll bar on top & enable popup
 document.addEventListener("scroll", () => {
@@ -9,9 +9,15 @@ document.addEventListener("scroll", () => {
     scroll.style.width = percentege + "%";
 
     if (percentege >= 25 && localStorage.getItem("popup") != "dont") {
-        popup.style.display = "block";
+        popupElem.style.display = "block";
         localStorage.setItem("popup", "dont");
     }
+
+    if (percentege >= 10)
+        scrollTop.style.display = "block";
+    else
+        scrollTop.style.display = "none";
+
 });
 
 //scroll to top

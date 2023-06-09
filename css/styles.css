@@ -1,17 +1,3 @@
-html {
-  scroll-behavior: smooth;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  min-width: 320px;
-}
-
 .scroll {
   position: fixed;
   top: 0;
@@ -458,6 +444,24 @@ input[type=text]:focus {
   left: 0;
 }
 
+.scroll-top {
+  display: none;
+  color: #08A6E4;
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  transition: all 1s;
+}
+.scroll-top:hover {
+  cursor: pointer;
+}
+
 @media only screen and (min-width: 1000px) {
   .background {
     left: 0;
@@ -664,22 +668,18 @@ input[type=text]:focus {
     padding: 4rem;
   }
 }
-.scroll-top {
-  display: none;
-  color: #08A6E4;
-  position: fixed;
-  bottom: 2rem;
-  left: 2rem;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1.5rem;
-  font-weight: bold;
-  background-color: transparent;
-  border: none;
-  transition: all 1s;
+html {
+  scroll-behavior: smooth;
 }
-.scroll-top:hover {
-  cursor: pointer;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 320px;
 }
 
 /*# sourceMappingURL=styles.css.map */

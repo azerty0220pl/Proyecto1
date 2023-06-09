@@ -344,10 +344,13 @@ body {
     }
 
     .card {
+        position: relative;
         border: 1px solid black;
         border-radius: 20px;
         padding-top: 2rem;
         width: 100%;
+        transition: all 0.5s;
+        padding-bottom: 4rem;
 
         div {
             display: inline-block;
@@ -390,8 +393,10 @@ body {
     }
 
     .button {
-        margin-top: 3rem;
-        margin-bottom: -1.5rem;
+        position: absolute;
+        bottom: -1.5rem;
+        left: 25%;
+        transition: all 0.5s;
     }
 
     .currencies {
@@ -648,7 +653,7 @@ input[type="text"] {
 
         .card {
             width: 30%;
-            margin: 0;
+            margin: 2rem;
 
             div {
                 display: block;
@@ -658,13 +663,8 @@ input[type="text"] {
             }
 
             &--color-blue:hover {
-
-                .button {
-                    margin-top: 7rem;
-                }
-
                 box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
-                margin: -1rem 0;
+                margin: 0;
                 width: 35%;
             }
 
@@ -674,25 +674,15 @@ input[type="text"] {
                 }
 
                 &:hover {
-
-                    .button {
-                        margin-top: 7rem;
-                    }
-
                     box-shadow: 5px 10px 14px rgba(255, 17, 57, 0.29);
-                    margin: -1rem 0;
+                    margin: 0;
                     width: 35%;
                 }
             }
 
             &--color-green:hover {
-
-                .button {
-                    margin-top: 7rem;
-                }
-
                 box-shadow: 5px 10px 14px rgba(40, 204, 127, 0.29);
-                margin: -1rem 0;
+                margin: 0;
                 width: 35% !important;
             }
         }

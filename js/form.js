@@ -1,4 +1,7 @@
 const form = document.querySelector("#contact-form");
+const error1 = document.querySelector('.error-1');
+const error2 = document.querySelector('.error-2');
+const error3 = document.querySelector('.error-3');
 
 form.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -8,25 +11,34 @@ form.addEventListener("submit", (event) => {
     let consent = event.target.consent.checked;
     let emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 
-    if (name.length < 2 || name.length > 100)
+    if (name.length < 2 || name.length > 100){
         event.target.name.style.borderColor = "red";
+        error1.innerText = "Name should be between 2 and 100 characters long";
+    }
     else {
         event.target.name.style.borderColor = "grey";
         checks++;
+        error1.innerText = "";
     }
 
     if (emailRegex.test(email)) {
         event.target.email.style.borderColor = "grey";
         checks++;
+        error2.innerText = "";
     }
-    else
+    else{
         event.target.email.style.borderColor = "red";
+        error2.innerText = "Invalid email";
+    }
 
-    if (!consent)
+    if (!consent){
         event.target.consent.style.outline = "1px solid red";
+        error3.innerText = "You need to give us consent to process your personal data";
+    }
     else {
         event.target.consent.style.outline = "none";
         checks++;
+        error3.innerText = "";
     }
 
     if (checks == 3) {

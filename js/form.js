@@ -2,6 +2,7 @@ const form = document.querySelector("#contact-form");
 const error1 = document.querySelector('.error-1');
 const error2 = document.querySelector('.error-2');
 const error3 = document.querySelector('.error-3');
+const message = document.querySelector('#form-message');
 
 form.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -52,9 +53,12 @@ form.addEventListener("submit", (event) => {
                 'Content-type': 'application/json; charset=UTF-8',
             },
         }).then(() => {
+            message.innerText = "Thank you for trusting our service, " + event.target.name.value + ".\nWe will contact you as soon as we can.";
             event.target.name.value = '';
             event.target.email.value = '';
             event.target.consent.checked = false;
+            form.classList.add("invisible");
+            message.classList.remove('invisible');
         });
     }
 }, true);

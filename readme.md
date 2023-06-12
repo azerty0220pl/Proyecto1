@@ -1,2 +1,2 @@
 # OXYGEN Shop
-This is a website created with HTML, SASS and BEM from a predefined design as the final project for the first module of OXYGEN Academy's Fullstack Training. It was later upgraded with functionalities implemented in JavaScript as the final project of the second module.
+This is a website created with HTML, SASS and BEM from a predefined design as the final project for the first module of OXYGEN Academy's Fullstack Training. It was later upgraded with functionalities implemented in JavaScript as the final project of the second module. Page is built and live [here](https://azerty0220pl.github.io/OxygenShop/).

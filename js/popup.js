@@ -1,6 +1,9 @@
 const popup = document.querySelector(".popup-wrapper");
 const popupForm = document.querySelector("#popup-form");
 const closePopup = document.querySelector(".close");
+const error = document.querySelector(".popup-error");
+const popupMessage = document.querySelector("#popup-message");
+const popupRequest = document.querySelector("#popup-request");
 
 //enable popup after 5s
 setTimeout(() => {
@@ -42,9 +45,12 @@ popupForm.addEventListener("submit", (event) => {
             },
         }).then(() => {
             event.target.email.value = '';
-            popup.style.display = "none";
+            popupRequest.classList.add("invisible");
+            popupMessage.classList.remove("invisible");
         });
     }
-    else
+    else{
         event.target.email.style.borderColor = "red";
+        error.innerText = "Invalid email."
+    }
 }, true);

@@ -34,16 +34,23 @@
     <div class="popup-wrapper">
         <button class="fa-solid fa-xmark close"></button>
         <div class="popup">
-            <p class="text text--title-1">Subscribe to our newsletter!</p>
-            <p class="text">Do you want to receive information about us you don't care about?</p>
-            <p class="text">Sign up and fill your inbox with spam!</p>
-            <form id="popup-form">
-                <label for="email">
-                    <p class="text text--color-blue text--spaced-1 text--size-small text--align-start">Email</p>
-                    <input type="text" id="email" />
-                </label>
-                <input type="submit" id="submit" class="button button--color-blue button--shadow-blue submit" value="Subscribe!" />
-            </form>
+            <p class="text text--title-1 text--color-blue">Subscribe to our newsletter!</p>
+            <div id="popup-request">
+                <p class="text">Do you want to receive information about us you don't care about?</p>
+                <p class="text">Sign up and fill your inbox with spam!</p>
+                <form id="popup-form">
+                    <label for="email">
+                        <p class="text text--color-blue text--spaced-1 text--size-small text--align-start">Email</p>
+                        <input type="text" id="email" />
+                        <p class="text text--color-deny text--align-start text--size-small popup-error"></p>
+                    </label>
+                    <input type="submit" id="submit" class="button button--color-blue button--shadow-blue submit" value="Subscribe!" />
+                </form>
+            </div>
+            <div id="popup-message" class="invisible">
+                <p class="text">Thank you for signing up!</p>
+                <p class="text">We are sure you will regret it.</p>
+            </div>
         </div>
     </div>
     <div id="home" class="home sec">

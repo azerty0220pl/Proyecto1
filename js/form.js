@@ -1,11 +1,11 @@
-const form = document.querySelector("#contact-form");
+const constactForm = document.querySelector("#contact-form");
 const error1 = document.querySelector('.error-1');
 const error2 = document.querySelector('.error-2');
 const error3 = document.querySelector('.error-3');
 const message = document.querySelector('#form-message');
 
-const from = () => {
-    form.addEventListener("submit", (event) => {
+const form = () => {
+    constactForm.addEventListener("submit", (event) => {
         event.preventDefault();
         let checks = 0;
         let name = event.target.name.value;
@@ -58,7 +58,7 @@ const from = () => {
                 event.target.name.value = '';
                 event.target.email.value = '';
                 event.target.consent.checked = false;
-                form.classList.add("invisible");
+                constactForm.classList.add("invisible");
                 message.classList.remove('invisible');
             });
         }

@@ -141,4 +141,4 @@ class Slider {
     }
 }
 
-const slider = new Slider("img-4");
+export default Slider;

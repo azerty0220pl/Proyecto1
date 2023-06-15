@@ -474,7 +474,7 @@ input[type=text]:focus {
   }
   .card-holder {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin: 6rem 0;
   }
   .benefits .card {
@@ -562,6 +562,7 @@ input[type=text]:focus {
     margin-bottom: 1rem;
   }
   .pricing .card {
+    box-sizing: content-box;
     width: 30%;
     margin: 2rem;
   }
@@ -574,20 +575,26 @@ input[type=text]:focus {
   .pricing .card--color-blue:hover {
     box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
     margin: 0;
-    width: 35%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    width: 30%;
   }
   .pricing .card--color-pink div:first-of-type {
     padding-bottom: 0.75rem;
   }
   .pricing .card--color-pink:hover {
     box-shadow: 5px 10px 14px rgba(255, 17, 57, 0.29);
+    width: 30%;
     margin: 0;
-    width: 35%;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
   .pricing .card--color-green:hover {
     box-shadow: 5px 10px 14px rgba(40, 204, 127, 0.29);
+    width: 30%;
     margin: 0;
-    width: 35% !important;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
   .pricing .button {
     width: 40%;

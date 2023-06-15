@@ -1,0 +1,61 @@
+$--color-blue: #08A6E4;
+$--color-pink: #FB3B64;
+$--color-green: #55DFB4;
+$--background-grey: #F7F7F7;
+
+//home
+.background {
+    left: 0;
+    margin-left: -2rem;
+    width: 100vw;
+}
+
+//button
+.button--width-full {
+    width: auto;
+    padding: 0 10rem;
+}
+
+//extra
+.card-holder {
+    display: flex;
+    justify-content: center;
+    margin: 6rem 0;
+}
+
+//text
+.text--state-selected {
+    color: black;
+    border-bottom: 3px solid $--color-blue;
+}
+
+//footer
+.footer {
+    padding: 0.5rem 8rem;
+}
+
+//navBar
+.navBar {
+    padding: 0 1rem;
+
+    p {
+        margin-top: 0.5rem !important;
+    }
+
+    div {
+        margin: 0 !important;
+    }
+}
+
+//popup
+.popup {
+    position: fixed;
+    width: 50%;
+    left: 25%;
+    top: 10rem;
+    background-color: white;
+    border-radius: 1rem;
+    border: 2px solid $--color-blue;
+    z-index: 30;
+    padding: 4rem;
+}

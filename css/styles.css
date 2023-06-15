@@ -463,20 +463,6 @@ input[type=text]:focus {
 }
 
 @media only screen and (min-width: 1000px) {
-  .background {
-    left: 0;
-    margin-left: -2rem;
-    width: 100vw;
-  }
-  .button--width-full {
-    width: auto;
-    padding: 0 10rem;
-  }
-  .card-holder {
-    display: flex;
-    justify-content: center;
-    margin: 6rem 0;
-  }
   .benefits .card {
     width: 75%;
     margin: 4rem auto;
@@ -526,10 +512,6 @@ input[type=text]:focus {
   .last-card .card p {
     width: 66.6%;
     margin-left: 0;
-  }
-  .text--state-selected {
-    color: black;
-    border-bottom: 3px solid #08A6E4;
   }
   .line {
     display: block;
@@ -600,9 +582,6 @@ input[type=text]:focus {
     width: 40%;
     margin-top: 5rem;
   }
-  .footer {
-    padding: 0.5rem 8rem;
-  }
   .contact {
     display: flex;
     justify-content: center;
@@ -625,15 +604,6 @@ input[type=text]:focus {
   }
   .contact .card-holder * {
     margin: 0;
-  }
-  .navBar {
-    padding: 0 1rem;
-  }
-  .navBar p {
-    margin-top: 0.5rem !important;
-  }
-  .navBar div {
-    margin: 0 !important;
   }
   .menu {
     height: 3rem;
@@ -662,6 +632,36 @@ input[type=text]:focus {
   .menu a:active {
     color: black;
     border-bottom: 3px solid #08A6E4;
+  }
+  .background {
+    left: 0;
+    margin-left: -2rem;
+    width: 100vw;
+  }
+  .button--width-full {
+    width: auto;
+    padding: 0 10rem;
+  }
+  .card-holder {
+    display: flex;
+    justify-content: center;
+    margin: 6rem 0;
+  }
+  .text--state-selected {
+    color: black;
+    border-bottom: 3px solid #08A6E4;
+  }
+  .footer {
+    padding: 0.5rem 8rem;
+  }
+  .navBar {
+    padding: 0 1rem;
+  }
+  .navBar p {
+    margin-top: 0.5rem !important;
+  }
+  .navBar div {
+    margin: 0 !important;
   }
   .popup {
     position: fixed;

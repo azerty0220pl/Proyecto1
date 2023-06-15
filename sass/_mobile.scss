@@ -1,15 +1,15 @@
-@use 'popup';
-@use 'navBar';
-@use 'home';
-@use 'text';
-@use 'button';
-@use 'benefits';
-@use 'pricing';
-@use 'contact';
-@use 'other';
-@use 'footer';
-@use 'slider';
-@use 'scroll';
+@import './mobile/popup';
+@import './mobile/navBar';
+@import './mobile/home';
+@import './mobile/text';
+@import './mobile/button';
+@import './mobile/benefits';
+@import './mobile/pricing';
+@import './mobile/contact';
+@import './mobile/other';
+@import './mobile/footer';
+@import './mobile/slider';
+@import './mobile/scroll';
 
 .sec {
     margin-top: 3rem;

@@ -1,0 +1,39 @@
+$--color-blue: #08A6E4;
+$--color-pink: #FB3B64;
+$--color-green: #55DFB4;
+$--background-grey: #F7F7F7;
+
+.menu {
+    height: 3rem;
+
+    &--platform-mobile {
+        display: none !important;
+    }
+
+    &--platform-pc {
+        display: inline-block !important;
+    }
+
+    div {
+        display: flex !important;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    a {
+        display: inline-block;
+        margin: 0 !important;
+        width: 20%;
+        padding: calc(1rem - 3px) 0;
+        vertical-align: center;
+
+        &:active {
+            color: black;
+            border-bottom: 3px solid $--color-blue;
+        }
+    }
+
+    width: 45%;
+}

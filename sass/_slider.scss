@@ -1,0 +1,29 @@
+.slider {
+    display: flex;
+    position: relative;
+    align-items: center;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 8rem;
+    background-color: black;
+    width: 75%;
+    aspect-ratio: 16/9;
+}
+
+.slider-image {
+    display: none;
+    position: relative;
+    min-width: 100%;
+    transition: none;
+    left: 0;
+}
+
+.dot-wrapper {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    bottom: 1rem;
+    left: 0;
+}

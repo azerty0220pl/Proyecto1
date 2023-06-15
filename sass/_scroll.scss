@@ -1,0 +1,31 @@
+$--color-blue: #08A6E4;
+$--color-pink: #FB3B64;
+$--color-green: #55DFB4;
+$--background-grey: #F7F7F7;
+
+.scroll {
+    position: fixed;
+    top: 0;
+    height: 2px;
+    border: 2px solid $--color-blue;
+    z-index: 20;
+}
+
+.scroll-top {
+    display: none;
+    color: $--color-blue;
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+    transition: all 1s;
+
+    &:hover {
+        cursor: pointer;
+    }
+}

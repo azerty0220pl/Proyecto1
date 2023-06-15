@@ -1,0 +1,96 @@
+$--color-blue: #08A6E4;
+$--color-pink: #FB3B64;
+$--color-green: #55DFB4;
+$--background-grey: #F7F7F7;
+
+.text {
+    font-family: Raleway;
+    color: black;
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    text-decoration: none;
+    background-color: white;
+
+    &--size-small {
+        font-size: 0.75rem;
+        margin: 0;
+    }
+
+    &--type-bold {
+        font-weight: 800;
+    }
+
+    &--spaced-1 {
+        letter-spacing: 3px;
+    }
+
+    &--spaced-2 {
+        letter-spacing: 6px;
+    }
+
+    &--title-1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    &--title-2 {
+        font-size: 1.75rem;
+    }
+
+    &--logo {
+        color: $--color-blue;
+        text-align: start;
+        font-size: 2rem;
+        display: inline-block;
+        font-weight: 300;
+        margin: 0;
+    }
+
+    &--color-blue {
+        color: $--color-blue;
+    }
+
+    &--color-pink {
+        color: $--color-pink;
+    }
+
+    &--color-green {
+        color: $--color-green;
+    }
+
+    &--color-accept {
+        color: #00FF00;
+        margin: 0;
+    }
+
+    &--color-deny {
+        color: #ff0000;
+        margin: 0;
+    }
+
+    &--color-grey {
+        color: grey;
+    }
+
+    &--align-start {
+        text-align: start;
+    }
+
+    &--align-end {
+        text-align: end;
+    }
+
+    &--price {
+        font-size: 2.5rem;
+        margin: 0;
+    }
+
+    &--margin-small {
+        margin-bottom: 0.3rem;
+    }
+
+    &--state-selected {
+        color: black;
+    }
+}

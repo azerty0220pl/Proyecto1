@@ -1,0 +1,43 @@
+$--color-blue: #08A6E4;
+$--color-pink: #FB3B64;
+$--color-green: #55DFB4;
+$--background-grey: #F7F7F7;
+
+.popup-wrapper {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #00000055;
+    height: 100%;
+    width: 100%;
+    z-index: 25;
+
+    .close {
+        position: fixed;
+        right: 4rem;
+        top: 2rem;
+        color: white;
+        width: 2rem;
+        height: 2rem;
+        font-size: 1.5rem;
+        border: none;
+        background-color: transparent;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.popup {
+    position: fixed;
+    width: 75%;
+    left: 12.5%;
+    top: 10rem;
+    background-color: white;
+    border-radius: 1rem;
+    border: 2px solid $--color-blue;
+    z-index: 30;
+    padding: 2rem;
+}

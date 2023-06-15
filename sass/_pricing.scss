@@ -1,0 +1,75 @@
+$--color-blue: #08A6E4;
+$--color-pink: #FB3B64;
+$--color-green: #55DFB4;
+$--background-grey: #F7F7F7;
+
+.pricing {
+    padding-top: 4rem;
+
+    .card-holder {
+        padding: 2rem;
+    }
+
+    .card {
+        position: relative;
+        border: 1px solid black;
+        border-radius: 20px;
+        padding-top: 2rem;
+        width: 100%;
+        transition: all 0.5s;
+        padding-bottom: 4rem;
+
+        div {
+            display: inline-block;
+            height: 100%;
+            width: calc(50% - 2px);
+            margin: auto;
+            vertical-align: middle;
+        }
+
+        &--color-blue {
+            border-color: $--color-blue;
+            margin: 3rem 0;
+
+            &:hover {
+                box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+                margin: 3rem -1rem;
+                width: calc(100% + 2rem);
+            }
+        }
+
+        &--color-pink {
+            border-color: $--color-pink;
+
+            &:hover {
+                box-shadow: 5px 10px 14px rgba(255, 17, 57, 0.29);
+                margin: 0 -1rem;
+                width: calc(100% + 2rem);
+            }
+        }
+
+        &--color-green {
+            border-color: $--color-green;
+
+            &:hover {
+                box-shadow: 5px 10px 14px rgba(40, 204, 127, 0.29);
+                margin: 0 -1rem;
+                width: calc(100% + 2rem);
+            }
+        }
+
+        .button {
+            position: absolute;
+            bottom: -1.5rem;
+            left: 25%;
+            transition: all 0.5s;
+        }
+    }
+
+
+    .currencies {
+        display: flex;
+        justify-content: space-around;
+        padding: 2rem;
+    }
+}

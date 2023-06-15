@@ -1,0 +1,90 @@
+$--color-blue: #08A6E4;
+$--color-pink: #FB3B64;
+$--color-green: #55DFB4;
+$--background-grey: #F7F7F7;
+
+.button {
+    height: 3rem;
+    border-radius: 1.5rem;
+    margin: auto;
+    display: block;
+    border: none;
+    font-weight: 700;
+    width: 50%;
+
+    &--width-full {
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    &--color-blue {
+        background-color: $--color-blue;
+        color: white;
+    }
+
+    &--shadow-blue {
+        box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+    }
+
+    &--color-pink {
+        background-color: $--color-pink;
+        color: white;
+    }
+
+    &--color-green {
+        background-color: $--color-green;
+        color: white;
+    }
+
+    &--size-small {
+        width: 3rem !important;
+    }
+
+    &--color-transparent {
+        background-color: transparent;
+        color: $--color-blue;
+    }
+
+    &--slider-left {
+        position: absolute;
+        width: 2rem;
+        height: 2rem;
+        z-index: 5;
+        top: 50%;
+        left: 1rem;
+        background-color: transparent;
+        border: none;
+        color: $--color-blue;
+        font-size: 1.5rem;
+    }
+
+    &--slider-right {
+        position: absolute;
+        width: 2rem;
+        height: 2rem;
+        z-index: 5;
+        top: 50%;
+        right: 1rem;
+        background-color: transparent;
+        border: none;
+        color: $--color-blue;
+        font-size: 1.5rem;
+    }
+
+    &--slider-dot {
+        width: 1rem;
+        height: 1rem;
+        background-color: rgba(7, 171, 230, 0.25);
+        border: 1px solid rgba(7, 171, 230, 0.35);
+        margin: 0;
+    }
+
+    &--slider-selected {
+        background-color: rgba(7, 171, 230, 0.75);
+        border: 1px solid rgba(7, 171, 230, 1);
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
